@@ -1,0 +1,8 @@
+{
+  "name": "newproject",
+  "dockerComposeFile": ["./docker-compose.dev.yml"],
+  "service": "development",
+  "workspaceFolder": "/app",
+  "shutdownAction": "stopCompose",
+  "extensions": ["esbenp.prettier-vscode"]
+}
