@@ -3,8 +3,9 @@ version: "3.8"
 services:
   development:
     container_name: development
-    build: ../
+    build:
+      context: ../
+      target: dev_stage
     volumes:
       - ../:/app:cached
     command: tail -f /dev/null
-    privileged: true
