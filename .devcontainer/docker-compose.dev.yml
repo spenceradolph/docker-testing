@@ -8,3 +8,4 @@ services:
     volumes:
       - ../:/app:cached
     command: tail -f /dev/null
+    privileged: true
