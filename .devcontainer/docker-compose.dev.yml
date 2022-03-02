@@ -4,7 +4,6 @@ services:
   development:
     container_name: development
     build: ../
-    env_file: ../.env
     volumes:
       - ../:/app:cached
     command: tail -f /dev/null

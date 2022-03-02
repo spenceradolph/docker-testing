@@ -4,5 +4,5 @@
   "service": "development",
   "workspaceFolder": "/app",
   "shutdownAction": "stopCompose",
-  "extensions": ["esbenp.prettier-vscode"]
+  "extensions": []
 }
