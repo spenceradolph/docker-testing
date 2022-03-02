@@ -1,16 +1,20 @@
-# Stage 1 = dev environment / install
+# Stage 1 = dev environment
 #######################################################
 FROM node:17 AS dev_stage
 WORKDIR /app
+
+# Stage 2 = install
+#######################################################
+FROM dev_stage AS install_stage
 COPY . .
 RUN npm install
 
-# Stage 2 = build compiled/production version
+# Stage 3 = build compiled/production version
 #######################################################
-FROM dev_stage AS builder_stage
+FROM install_stage AS builder_stage
 RUN npm run build
 
-# Stage 3 = run (slim)
+# Stage 4 = run (slim)
 #######################################################
 FROM node:17-alpine
 WORKDIR /app
